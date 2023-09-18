@@ -14,7 +14,7 @@ const SearchBar = () => {
                 id="Com"
                 className="text-base outline-none border-2 py-2 rounded-lg bg-slate-200"
               >
-                <option value="com" selected>
+                <option value="com" defaultValue="com">
                   More Filter
                 </option>
                 <option value="net">net</option>
