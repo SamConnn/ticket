@@ -35,7 +35,7 @@ const Header = () => {
         </div>
       </div>
       <div className="flex grow items-center justify-end sm:hidden">
-        <Popover.Button className="inline-flex items-center justify-center rounded bg-white text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-400">
+        <Popover.Button className="inline-flex items-center justify-center rounded text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-400">
           <span className="sr-only">Open main menu</span>
           <Bars3Icon className="h-6 w-6" aria-hidden="true" />
         </Popover.Button>

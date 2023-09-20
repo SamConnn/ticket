@@ -1,13 +1,13 @@
 const SearchBar = () => {
   return (
-    <div className=" bg-white flex justify-center items-center w-full">
-      <div className=" bg-white rounded-lg w-full pb-28">
+    <div className=" flex justify-center items-center w-full">
+      <div className="rounded-lg w-full pb-28">
         <form>
-          <div className="sm:flex items-center rounded-lg overflow-hidden px-2 py-1 justify-between bg-slate-200">
+          <div className="sm:flex items-center rounded-lg overflow-hidden px-2 py-1 justify-between bg-slate-200 shadow-lg">
             <input
-              className="text-base text-black flex-grow outline-none px-2 bg-slate-200"
+              className="text-base text-black flex-grow outline-none px-2 bg-slate-200 py-4"
               type="text"
-              placeholder="Search your domain name"
+              placeholder="Search your favorite"
             />
             <div className="ms:flex items-center px-2 rounded-lg space-x-4 mx-auto">
               <select
