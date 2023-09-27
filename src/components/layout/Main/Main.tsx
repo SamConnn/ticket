@@ -1,3 +1,5 @@
+import Event from "@/components/layout/Main/Event";
+import Partner from "@/components/layout/Main/Partner";
 import Popular from "@/components/layout/Main/Popular";
 import Trending from "@/components/layout/Main/Trending";
 import SearchBar from "@/components/layout/Main/search/search-bar";
@@ -13,6 +15,8 @@ const Main = ({ className, children }: MainProps) => {
       <SearchBar />
       <Trending />
       <Popular />
+      <Event/>
+      <Partner/>
     </main>
   );
 };

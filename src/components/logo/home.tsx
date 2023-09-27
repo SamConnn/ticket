@@ -1,4 +1,4 @@
-const HomeLogo = () => {
+const SmallHomeLogo = () => {
   return (
   <svg
     width="200"
@@ -50,4 +50,4 @@ const HomeLogo = () => {
   );
 };
 
-export default HomeLogo;
+export default SmallHomeLogo;

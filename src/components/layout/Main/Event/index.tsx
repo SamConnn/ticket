@@ -9,16 +9,12 @@ interface CardProps {
   style?: React.CSSProperties;
 }
 
-const Popular = () => {
+const Event = () => {
   const url = "https://picsum.photos/id/237/200/300";
   return (
     <div className="w-full">
-      <h1 className="font-bold text-2xl pb-4">Popular this week</h1>
+      <h1 className="font-bold text-2xl pb-4 pt-16">Event for this week</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-16 md:gap-8 sm:gap-4">
-        <CardEvent className="bg-[url('../../public/92123123.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg ease-in-out transform hover:scale-105 transition duration-500" />
-        <CardEvent className="bg-[url('../../public/92123123.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
-        <CardEvent className="bg-[url('../../public/9124411.png')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
-        <CardEvent className="bg-[url('../../public/9289231.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
         <CardEvent className="bg-[url('../../public/92123123.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg ease-in-out transform hover:scale-105 transition duration-500" />
         <CardEvent className="bg-[url('../../public/92123123.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
         <CardEvent className="bg-[url('../../public/9124411.png')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
@@ -59,4 +55,4 @@ function CardEvent({ className, style }: CardProps) {
   );
 }
 
-export default Popular;
+export default Event;
