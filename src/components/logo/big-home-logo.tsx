@@ -1,8 +1,6 @@
 const BigHomeLogo = () => {
     return (
     <svg
-      width="400"
-      height="186"
       viewBox="0 0 240.4025486827433 36"
       className="css-1j8o68f"
     >
