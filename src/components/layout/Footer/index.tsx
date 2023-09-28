@@ -1,6 +1,7 @@
 "use client"
 
 import { Facebook, Instagram, Twitter } from "@/components/logo/SocialMedia";
+import { Separator } from "@/components/ui/separator";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -61,7 +62,7 @@ const Footer = () => {
             </h5>
           </div>
         </div>
-        <hr className="border-gray-600" />
+        <Separator className="border-gray-800" />
         <div className="flex flex-wrap items-center md:justify-between justify-center">
           <div className="w-full md:w-4/12 px-4 mx-auto text-center">
             <div className="text-sm text-blueGray-500 font-semibold pt-5">

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images:{
-        domains:['cdn.pixabay.com', 'www.kasandbox.org']
+        domains:['cdn.pixabay.com', 'source.unsplash.com', 'picsum.photos']
     }
 }
 

@@ -26,17 +26,14 @@ const Popular = () => {
       <div className="w-full">
         <h1 className="font-bold text-2xl pb-4">Popular this week</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-16 md:gap-8 sm:gap-4">
-          <CardEvent className="bg-[url('../../public/92123123.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg ease-in-out transform hover:scale-105 transition duration-500" />
-          <CardEvent className="bg-[url('../../public/92123123.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
-          <CardEvent className="bg-[url('../../public/9124411.png')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
-          <CardEvent className="bg-[url('../../public/9289231.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
-          <CardEvent className="bg-[url('../../public/92123123.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg ease-in-out transform hover:scale-105 transition duration-500" />
-          <CardEvent className="bg-[url('../../public/92123123.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
-          <CardEvent className="bg-[url('../../public/9124411.png')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
-          <CardEvent
-            className={`bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500`}
-            style={{ backgroundImage: `url(${url})` }}
-          />
+          <CardEvent className="bg-[url('../../public/album_1.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg ease-in-out transform hover:scale-105 transition duration-500" />
+          <CardEvent className="bg-[url('../../public/album_2.webp')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
+          <CardEvent className="bg-[url('../../public/album_3.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
+          <CardEvent className="bg-[url('../../public/album_4.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
+          <CardEvent className="bg-[url('../../public/album_5.webp')] bg-cover bg-center hover:opacity-70 shadow-lg ease-in-out transform hover:scale-105 transition duration-500" />
+          <CardEvent className="bg-[url('../../public/album_1.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
+          <CardEvent className="bg-[url('../../public/album_2.webp')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
+          <CardEvent className="bg-[url('../../public/album_3.jpg')] bg-cover bg-center hover:opacity-70 shadow-lg transform hover:scale-105 transition duration-500" />
         </div>
       </div>
     </motion.div>
