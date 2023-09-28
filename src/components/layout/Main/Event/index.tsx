@@ -2,7 +2,8 @@
 
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface CardProps {
   className?: string;
@@ -10,14 +11,18 @@ interface CardProps {
 }
 
 const Event = () => {
+  const Ref = useRef<HTMLElement>(null);
+  const isInView = useInView(Ref, { once: true });
   const url = "https://picsum.photos/id/237/200/300";
-  
+
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
+      ref={Ref as React.RefObject<HTMLDivElement>}
+      style={{
+        transform: isInView ? "none" : "translateX(-100px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+      }}
     >
       <div className="w-full">
         <h1 className="font-bold text-2xl pb-4 pt-16">Event for this week</h1>
