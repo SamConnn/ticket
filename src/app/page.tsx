@@ -7,7 +7,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col backdrop-blur-xl bg-gradient-to-b from-gray-50 to-slate-100">
       <Header/>
       {/* <Section/> */}
-      <Main className="pt-36"/>
+      <Main className="pt-10"/>
       <Footer/> 
     </div>
   );

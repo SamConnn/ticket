@@ -72,7 +72,7 @@ const Section = () => {
                 objectFit="cover"
                 objectPosition="center"
                 alt="nature-1"
-                unoptimized
+                quality={100}
               />
             </div>
           </SwiperSlide>
@@ -99,7 +99,6 @@ const Section = () => {
             />
           </SwiperSlide>
           <SwiperSlide>
-            {" "}
             <Image
               src={highlight_4}
               className="object-cover object-center w-full h-full p-2"
@@ -111,7 +110,6 @@ const Section = () => {
             />
           </SwiperSlide>
           <SwiperSlide>
-            {" "}
             <Image
               src={highlight_5}
               className="object-cover object-center w-full h-full p-2"
