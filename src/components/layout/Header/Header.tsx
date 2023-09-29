@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { User } from "lucide-react";
 import Link from "next/link";
 import { Fragment } from "react";
-import Section from "../Section";
 
 const Header = () => {
   const container = {
@@ -209,9 +208,6 @@ const Header = () => {
             </motion.div>
           </div>
         </Popover>
-        <div className="bg-[#f4f6f6]">
-          <Section />
-        </div>
       </div>
     </AnimatePresence>
   );
