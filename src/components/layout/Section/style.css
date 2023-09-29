@@ -8,15 +8,23 @@
   box-shadow: 0 0 0 1px rgba(189, 188, 188, 0.5), 0 60px 40px -7px rgba(0, 0, 0, 0.5);
 }
 
+.bg-color {
+  background: linear-gradient(to top,
+      #eef1ef 0%,
+      #eef1ef 50%,
+      #f4f6f6 50%,
+      #f4f6f6 100%);
+}
+
 @media screen and (max-width: 768px) {
-.swiper {
+  .swiper {
     width: 600px;
     height: 300px;
   }
 }
 
 @media screen and (max-width: 480px) {
-.swiper {
+  .swiper {
     width: 350px;
     height: 200px;
   }

@@ -37,35 +37,44 @@ const Section = () => {
   };
 
   return (
-    <motion.div
-      ref={Ref as React.RefObject<HTMLDivElement>}
-      style={{
-        transform: isInView ? "none" : "translateX(-100px)",
-        opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-      }}
-      className=" items-center text-center justify-center py-10"
-    >
-      <div className="w-full h-full">
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          //   pagination={{
-          //     clickable: true,
-          //   }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          onAutoplayTimeLeft={onAutoplayTimeLeft}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <div className="rounded-2xl overflow-hidden h-full w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className=" items-center text-center justify-center py-10 w-full bg-color"
+      >
+        <div className="w-full h-full">
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            //   pagination={{
+            //     clickable: true,
+            //   }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            onAutoplayTimeLeft={onAutoplayTimeLeft}
+            className="mySwiper z-50"
+          >
+            <SwiperSlide>
+              <div className="rounded-2xl overflow-hidden h-full w-full">
+                <Image
+                  src={highlight_1}
+                  className="p-2"
+                  fill
+                  objectFit="cover"
+                  objectPosition="center"
+                  alt="nature-1"
+                  quality={100}
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
               <Image
-                src={highlight_1}
+                src={highlight_2}
                 className="p-2"
                 fill
                 objectFit="cover"
@@ -73,55 +82,43 @@ const Section = () => {
                 alt="nature-1"
                 quality={100}
               />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src={highlight_2}
-              className="p-2"
-              fill
-              objectFit="cover"
-              objectPosition="center"
-              alt="nature-1"
-              quality={100}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src={highlight_3}
-              className="object-cover object-center w-full h-full p-2"
-              fill
-              objectFit="cover"
-              objectPosition="center"
-              alt="nature-1"
-              quality={100}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src={highlight_4}
-              className="object-cover object-center w-full h-full p-2"
-              fill
-              objectFit="cover"
-              objectPosition="center"
-              alt="nature-1"
-              quality={100}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src={highlight_5}
-              className="object-cover object-center w-full h-full p-2"
-              fill
-              objectFit="cover"
-              objectPosition="center"
-              alt="nature-1"
-              quality={100}
-            />
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </motion.div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={highlight_3}
+                className="object-cover object-center w-full h-full p-2"
+                fill
+                objectFit="cover"
+                objectPosition="center"
+                alt="nature-1"
+                quality={100}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={highlight_4}
+                className="object-cover object-center w-full h-full p-2"
+                fill
+                objectFit="cover"
+                objectPosition="center"
+                alt="nature-1"
+                quality={100}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={highlight_5}
+                className="object-cover object-center w-full h-full p-2"
+                fill
+                objectFit="cover"
+                objectPosition="center"
+                alt="nature-1"
+                quality={100}
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </motion.div>
   );
 };
 
