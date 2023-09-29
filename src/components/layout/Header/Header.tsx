@@ -2,39 +2,104 @@
 import HomeLogo from "@/components/logo/home";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
+import { motion } from "framer-motion";
 import { User } from "lucide-react";
 import Link from "next/link";
 import { Fragment } from "react";
 import Section from "../Section";
 
 const Header = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+    }),
+  };
+
+  const child = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: 20,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
+
   return (
-    <div className="bg-gray-100 shadow-[5px_5px_0px_0px_rgba(0, 0, 0, 0.2)]">
+    <div className="bg-[#f4f6f6] shadow">
       <Popover className="container mx-auto flex items-center px-6 py-2 h-24 border-b-2 border-gray-300">
-        <div className="flex w-56">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            type: "spring",
+            damping: 12,
+            stiffness: 100,
+          }}
+          className="flex w-56"
+        >
           <HomeLogo />
-        </div>
+        </motion.div>
         <div className="grow">
-          <div className="sm:flex items-center justify-center gap-2 md:gap-8 hidden">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className="sm:flex items-center justify-center gap-2 md:gap-8 hidden"
+          >
             <Link
               href="/examples/dashboard"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
-              My Events
+              <motion.h3
+                variants={child}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-[16px] font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                My Events
+              </motion.h3>
             </Link>
             <Link
               href="/examples/dashboard"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="text-[16px] font-medium text-muted-foreground transition-colors hover:text-primary"
             >
-              Customers
+              <motion.h3
+                variants={child}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-[16px] font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                My Tickets
+              </motion.h3>
             </Link>
             <Link
               href="/examples/dashboard"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="text-[16px] font-medium text-muted-foreground transition-colors hover:text-primary"
             >
-              Customers
+              <motion.h3
+                variants={child}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-[16px] font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                Customers
+              </motion.h3>
             </Link>
-          </div>
+          </motion.div>
         </div>
         <div className="flex grow items-center justify-end sm:hidden">
           <Popover.Button className="inline-flex items-center justify-center rounded text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-400">
@@ -93,13 +158,13 @@ const Header = () => {
               <div className="mt-6 flex flex-col items-center gap-2 px-6 py-6">
                 <Link
                   href="register"
-                  className="rounded bg-slate-400 px-4 text-sm font-medium text-primary py-2 focus:ring-2 focus:ring-inset focus:ring-slate-400 w-full"
+                  className="rounded bg-slate-400 px-4 text-[16px] font-medium text-primary py-2 focus:ring-2 focus:ring-inset focus:ring-slate-400 w-full"
                 >
                   Sign Up
                 </Link>
                 <Link
                   href="login"
-                  className="rounded bg-slate-400 px-4 text-sm font-medium text-primary py-2 focus:ring-2 focus:ring-inset focus:ring-slate-400 w-full"
+                  className="rounded bg-slate-400 px-4 text-[16px] font-medium text-primary py-2 focus:ring-2 focus:ring-inset focus:ring-slate-400 w-full"
                 >
                   Login
                 </Link>
@@ -108,20 +173,39 @@ const Header = () => {
           </Popover.Panel>
         </Transition>
         <div className="hidden sm:block">
-          <div className="flex items-center justify-end gap-2 md:gap-8">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className="flex items-center justify-end gap-2 md:gap-8"
+          >
             <Link
               href="register"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary mr-2"
             >
-              <User />
+              <motion.h3
+                variants={child}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                <User />
+              </motion.h3>
             </Link>
             <Link
               href="login"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
-              Login
+              <motion.h3
+                variants={child}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-[16px] font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                Login
+              </motion.h3>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </Popover>
       <Section />

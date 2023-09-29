@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+"use client";
 import {
   Select,
   SelectContent,
@@ -8,6 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { motion } from "framer-motion";
 
 const Trending = () => {
   const trendingCategories = [
@@ -42,14 +43,21 @@ const Trending = () => {
       <h1 className="font-bold text-2xl sha">Check out trending categories</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:grid-cols-3 lg:gap-4 md:gap-0 sm:gap-0 gap-4">
         {trendingCategories.map((category, index) => (
-          <div key={index} className="hidden sm:block">
-            <Button
-              className="bg-gradient-to-tr from-zinc-50 to-zinc-200 px-6 py-6 text-black rounded-full mt-6 w-28
-          hover:from-zinc-200 hover:to-zinc-50 hover:text-black shadow-md"
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            key={index}
+            className="hidden sm:block"
+          >
+            <motion.button
+              className="bg-gradient-to-tr from-zinc-50 to-zinc-200 px-6 py-6 text-black rounded-full mt-6 m-auto text-[16px] w-32 font-bold h-12
+          hover:from-zinc-200 hover:to-zinc-50 shadow-md whitespace-nowrap flex items-center justify-center"
             >
               {category.name}
-            </Button>
-          </div>
+            </motion.button>
+          </motion.div>
         ))}
       </div>
       <div className="block sm:hidden">

@@ -1,6 +1,17 @@
+"use client";
+
+import { motion } from 'framer-motion';
 const SearchBar = () => {
   return (
-    <div className=" flex justify-center items-center w-full">
+    <motion.div 
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      }}
+    className=" flex justify-center items-center w-full">
       <div className="rounded-lg w-full pb-28">
         <form>
           <div className="sm:flex items-center rounded-lg overflow-hidden px-2 py-1 justify-between bg-slate-200 shadow-lg">
@@ -28,7 +39,7 @@ const SearchBar = () => {
           </div>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

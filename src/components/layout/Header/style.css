@@ -1,0 +1,12 @@
+.bg-image {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shadow {
+    /* shadow-[10px_10px_0px_0px_rgba(0, 0, 0, 0.75)] */
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
