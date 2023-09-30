@@ -3,9 +3,9 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import "swiper/css";
+import 'swiper/css/effect-fade';
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import highlight_1 from "../../../../public/highlight_1.jpg";
 import highlight_2 from "../../../../public/highlight_2.jpg";
@@ -37,88 +37,79 @@ const Section = () => {
   };
 
   return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 0, y: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        className=" items-center text-center justify-center py-10 w-full bg-color"
-      >
-        <div className="w-full h-full">
-          <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            //   pagination={{
-            //     clickable: true,
-            //   }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            onAutoplayTimeLeft={onAutoplayTimeLeft}
-            className="mySwiper z-50"
-          >
-            <SwiperSlide>
-              <div className="rounded-2xl overflow-hidden h-full w-full">
-                <Image
-                  src={highlight_1}
-                  className="p-2"
-                  fill
-                  objectFit="cover"
-                  objectPosition="center"
-                  alt="nature-1"
-                  quality={100}
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 0, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className=" items-center text-center justify-center py-10 w-full bg-color"
+    >
+      <div className="w-full h-full">
+        <Swiper
+          effect="fade"
+          fadeEffect={{
+            crossFade: true,
+          }}
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          navigation
+          modules={[Autoplay, Pagination, Navigation, EffectFade]}
+          onAutoplayTimeLeft={onAutoplayTimeLeft}
+          className="mySwiper z-50"
+        >
+          <SwiperSlide>
+            <div className="rounded-2xl overflow-hidden h-full w-full">
               <Image
-                src={highlight_2}
-                className="p-2"
+                src={highlight_1}
+                className="p-2 object-cover object-center w-full h-full"
                 fill
-                objectFit="cover"
-                objectPosition="center"
                 alt="nature-1"
                 quality={100}
               />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={highlight_3}
-                className="object-cover object-center w-full h-full p-2"
-                fill
-                objectFit="cover"
-                objectPosition="center"
-                alt="nature-1"
-                quality={100}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={highlight_4}
-                className="object-cover object-center w-full h-full p-2"
-                fill
-                objectFit="cover"
-                objectPosition="center"
-                alt="nature-1"
-                quality={100}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                src={highlight_5}
-                className="object-cover object-center w-full h-full p-2"
-                fill
-                objectFit="cover"
-                objectPosition="center"
-                alt="nature-1"
-                quality={100}
-              />
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </motion.div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src={highlight_2}
+              className="p-2 object-cover object-center w-full h-full"
+              fill
+              alt="nature-1"
+              quality={100}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src={highlight_3}
+              className="object-cover object-center w-full h-full p-2"
+              fill
+              alt="nature-1"
+              quality={100}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src={highlight_4}
+              className="object-cover object-center w-full h-full p-2"
+              fill
+              alt="nature-1"
+              quality={100}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src={highlight_5}
+              className="object-cover object-center w-full h-full p-2"
+              fill
+              alt="nature-1"
+              quality={100}
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </motion.div>
   );
 };
 
