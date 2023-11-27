@@ -1,9 +1,7 @@
 version: '2.1'
 services:
   frontend:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    build: .
     image: frontend
     container_name: ticket
     hostname: ticket
