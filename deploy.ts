@@ -1,4 +1,4 @@
-import { exec } from 'child_process';
+const { exec } = require('child_process');
 
 exec('git pull', (error: Error | null, stdout: string, stderr: string) => {
   if (error) {
