@@ -1,10 +1,14 @@
 version: '2.1'
 services:
   frontend:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     image: frontend
     container_name: ticket
     hostname: ticket
+    ports:
+      - "3000:3000"
     networks:
       - frontendnet
 networks:
