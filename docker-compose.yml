@@ -7,7 +7,7 @@ services:
     hostname: ticket
     ports:
       - "3000:3000"
-    networks:
-      - frontendnet
 networks:
-  frontendnet:
+    default:
+      external:
+        name: frontendnet
