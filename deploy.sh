@@ -1,9 +1,15 @@
 #!/bin/bash
 git pull
-# ==================== Docker Compose build ====================
-docker-compose up --build -d
-# ==================== DockerFile build ====================
-# docker stop ticket
-# docker rm -f ticket
-# docker build . -t frontend
-# docker run --hostname ticket --name ticket --network frontendnet -d frontend
+
+# Ask for user confirmation
+read -p "Are you sure you want to deploy? (y/n) " -n 1 -r
+echo    # move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    # If user confirmed, run the deploy command
+    docker-compose up --build -d
+else
+    # If user did not confirm, exit the script
+    echo "Deployment cancelled."
+    exit 1
+fi
