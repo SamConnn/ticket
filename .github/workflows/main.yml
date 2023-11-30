@@ -20,5 +20,5 @@ jobs:
         username: root
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
-          cd /path/to/dockerfile
+          cd /project/ticket && git pull &&
           docker-compose up --build -d
