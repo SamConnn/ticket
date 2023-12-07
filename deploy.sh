@@ -2,7 +2,7 @@
 git pull
 
 # Ask for user confirmation
-read -p "Are you sure you want to deploy? (y/n) " -n 1 -r
+read -p "Are you sure you want to deploy? (y/n) " -r
 echo    # move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
