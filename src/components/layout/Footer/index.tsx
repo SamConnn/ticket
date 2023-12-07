@@ -20,7 +20,7 @@ const Footer = () => {
       <footer className="relative pb-6 container mx-auto pt-12">
         <div className="flex flex-wrap text-left lg:text-left">
           <div className="w-full lg:w-6/12 px-4 mb-6">
-            <h4 className="text-3xl fonat-semibold text-gray-700">JOIN US</h4>
+            <h4 className="text-3xl font-semibold text-gray-700">JOIN US</h4>
             <h5 className="text-md mt-0 mb-2 text-gray-500 pt-6">
               Join our growing community of event enthusiasts and let
               TicketKamboda be your ultimate ticketing companion. Your next

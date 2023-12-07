@@ -135,7 +135,6 @@ const Ticket = () => {
         </div>
         <div className="bg-white h-screen">
           <div className="container mx-auto items-center justify-center">
-            {/* I want the grid to be responsive on mobile */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
               <div className="flex-1">test</div>
               <div className="flex-1">test</div>
